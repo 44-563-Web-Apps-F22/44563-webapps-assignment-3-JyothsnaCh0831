@@ -91,5 +91,31 @@
                 <td>Two days</td>
             </tr>
         </table>
+
+        <!-- Part 9 -->
+        <h2>Code Section</h2>
+        <p>The relevant question found on stackoverflow is mentioned below: </p>
+        <blockquote>
+            How to get all custom field values for specific field for custom post type WordPress
+            <blockquote>
+                Quick-link to the article: 
+                <a href="https://stackoverflow.com/questions/51368198/how-to-get-all-custom-
+                field-values-for-specific-field-for-custom-post-type-wordp">WordPress Solution</a>
+            </blockquote>
+        </blockquote>
+        <pre><h3>All Post Meta</h3>?php 
+// Get all the data 
+$getPostCustom = get_post_custom(); 
+foreach($getPostCustom as $name=>$value) {
+    echo "<strong>" . $name . "</strong>"."  =>  ";
+    foreach ($value as $nameAr=>$valueAr) {
+        echo "<br />";
+        echo $nameAr."  =>  ";
+        echo var_dump($valueAr);
+    }
+    echo "<br /><br />";
+}
+?>
+</pre>
     </body>
 </html>
